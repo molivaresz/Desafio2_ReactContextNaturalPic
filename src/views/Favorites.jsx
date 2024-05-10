@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import {PhotosContext} from "../context/PhotosContextProvider";
 import IconHeart from "../components/IconHeart";
+
 const Favorites = () => {
+
   const {data, setData} = useContext(PhotosContext)
+  
   const agregarFavorito =(id)=>{
     const dataActualizada = data.map(dataPhotos =>{
         if(dataPhotos.id === id){
